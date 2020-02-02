@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercise 2</title>
+</head>
+<body>
+
+	<Form>
+		<p>First Name:<br/>
+			<input type="text" name="fName">
+		</p>
+		<p>Last Name:<br/>
+			<input type="text" name="lName">
+		</p>
+		<p>Email Address:<br/>
+		<input type="Email" name="emailAddr">
+		</p>
+		<p>Date of Birth: 
+			<input type="Date" name="dob">
+		</p>
+		<div>
+			<fieldset style="width:500px;">
+			<legend>Credit Card Type:</legend>
+			<input type="radio" name="cardSel"> <img src="cardimages/visa debit.png" height="50" width=75> <br/>
+			<input type="radio" name="cardSel"> <img src="cardimages/paypal.png" height="50" width=75> <br/>
+			<input type="radio" name="cardSel"> <img src="cardimages/mastercard.png" height="50" width=75><br/>
+			<input type="radio" name="cardSel"> <img src="cardimages/american express.png" height="50" width=75><br/>
+			<p>
+				<input type="text" name="ccNum">
+				Credit Card Number
+			</p>
+			<p>Expiry Year: 
+				<select>
+	  				<option value="2020">2020</option>
+	  				<option value="2020">2021</option>
+					<option value="2021">2022</option>
+					<option value="2022">2022</option>
+				</select> 
+			</p>
+			<p>Expiry Month: 
+				<select>
+	  				<option value="Default">Select Month</option>
+	  				<option value="Jan">Jan</option>
+					<option value="Feb">Feb</option>
+					<option value="Mar">Mar</option>
+				</select> 
+			</p>
+		</fieldset>
+		</div>
+		<p>Additional Notes:<br/>
+			<textarea cols="50" rows="10">...Enter additional information here...</textarea>
+		</p>
+		<input type="Submit" value="Submit Card Details">
+	</Form>
+	<div>
+</div>
+</body>
+</html>
