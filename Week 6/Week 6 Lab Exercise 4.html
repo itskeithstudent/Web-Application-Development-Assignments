@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--Keith Ryan -->
+	<!--Web Application Development week 6
+		Lab Part 4 on Loops and Decisions-->
+	<title>Week 6 - Lab Part 4</title>
+</head>
+<body><p>This page takes a user input from a guessing prompt</p>
+<button onclick="guessNumberPrompt()"> Start the guessing game </button>
+<!--Button call starts prompting user to guess randomm number that is defined on page loading-->
+</body>
+<script>
+	//declare var on page load, that generates a random num from 1 to 10
+	var num = Math.ceil(Math.random() * 10);
+	//guessNumberPrompt function called on button press, keeps calling itself until guessed correctly
+	function guessNumberPrompt(){
+		guessedNumber = parseInt(prompt("Please Enter your guess!"));
+		if (guessedNumber === num){
+			alert("Congratulations you guessed correctly: " + guessedNumber);
+		}
+		else{
+			alert("Sorry " + guessedNumber + " is not the correct number");
+			guessNumberPrompt();
+		}
+	}
+</script>
+</html>

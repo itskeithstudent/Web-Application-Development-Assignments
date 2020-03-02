@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--Keith Ryan -->
+	<!--Web Application Development week 6
+		Lab Part 3 on Input and Output-->
+	<title>Week 6 - Lab Part 3</title>
+</head>
+<body><p>This page takes a user input from Enter Name button click and outputs it on Generate button click</p>
+<button onclick="enterNamePrompt()"> Enter Name </button>
+<button onclick="printGreeting()"> Generate Greeting! </button>
+<!--Button calls function instead of function being called from script tag-->
+</body>
+<script>
+	function enterNamePrompt(){
+		nameInput = prompt("Please Enter your name!");
+	}
+	function printGreeting(){
+		if (typeof nameInput === 'undefined'){
+			
+			alert("You've entered no name!");
+		}
+		else {
+			alert("Hello " + nameInput);
+		}
+		
+	}
+</script>
+</html>

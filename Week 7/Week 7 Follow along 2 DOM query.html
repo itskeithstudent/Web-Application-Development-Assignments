@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--Keith Ryan -->
+	<title>Week 7 - Basic DOM Queries part 2</title>
+</head>
+<body>
+	<h1 id="h1_1">this is h1_1</h1>
+	<h1 id="h1_2">this is h1_2</h1>
+	<h1 id="h1_3">this is h1_3</h1>
+	<input id="in1">
+	<button id="button1" onclick="updateH1_1()">Update h1_1</button>
+
+</body>
+<script>
+	function updateH1_1(){
+		var x = document.getElementById('in1').value;
+		document.getElementById("h1_1").innerHTML =x;
+	}
+</script>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--Keith Ryan -->
+	<!--Week 7 Lab Part 5 Guessing Game-->
+	<title>Week 7 - Lab Part 5</title>
+	<style>
+	</style>
+</head>
+<body>
+	<h1>Guessing Game</h1>
+	
+	<p>
+		<button id="startGuessing" onclick="guess()">Start Guessing Game</button>
+	</p>
+	<p>
+		<h1 id="guessStatusHeading"></h1>
+		<img src="" id="guessStatusImage">
+	</p>
+
+</body>
+<script>
+	function guess(){
+		randomNum = Math.floor(100*Math.random())
+		numGuesses = 6
+		guessHeading = document.getElementById("guessStatusHeading")
+		guessImage = document.getElementById("guessStatusImage")
+		for(i=0;i<numGuesses;i++){
+			guessedNumber = prompt("Guess, you have " + (numGuesses-i))
+			if(guessedNumber === randomNum){
+				guessHeading.innerHTML = "You guessed correctly!"
+				guessImage.src = "Images\\Smile.png"
+				break;
+			}
+			else if(guessedNumber<randomNum) {
+				guessHeading.innerHTML = "You guessed Too Low!"
+			}
+			else if(guessedNumber>randomNum) {
+				guessHeading.innerHTML = "You guessed Too High!"
+			}
+			if (i === numGuesses-1){
+					alert("The correct number was " + randomNum);
+					guessHeading.innerHTML = "You guessed incorrectly!"
+					guessImage.src = "Images\\Sad.png"
+			}
+			
+		}
+		
+		//document.write(randomNum)
+	}
+	
+</script>
+</html>

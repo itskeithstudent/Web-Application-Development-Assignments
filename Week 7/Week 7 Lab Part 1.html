@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--Keith Ryan -->
+	<!--Week 7 Lab Part 1-->
+	<title>Week 7 - Lab Part 1</title>
+	<style>
+		#h1_1{
+			display:inline;
+		}
+	</style>
+</head>
+<body>
+	<button id="button1" onclick="updateH1_1()">Change Text</button>
+	<h1 id="h1_1">This is JAVASCRIPT</h1>
+</body>
+<script>
+	function updateH1_1(){
+		h1_1=document.getElementById("h1_1");
+		h1_1.innerHTML="THIS IS DOM MANIPULATION";
+		h1_1.style.display= "block"
+	}
+</script>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--Keith Ryan -->
+	<!--Web Application Development week 6
+		Lab Part 6 on Loops and Decisions-->
+	<title>Week 6 - Lab Part 5</title>
+</head>
+<body><p>This page takes a user input from a user using a prompt, they have 6 attempts to guess a number between 1 and 100</p>
+<button onclick="guessNumberPrompt()"> Start the guessing game </button>
+<!--Button call starts prompting user to guess randomm number that is defined on page loading-->
+</body>
+<script>
+	//declare var on page load, that generates a random num from 1 to 100
+	
+	//guessNumberPrompt function called on button press, loops 6 times allow user to reguess if incorrect, otherwise it just alerts with a congrats message
+	function guessNumberPrompt(){
+		var num = Math.ceil(Math.random() * 100); //random nubmer from 1 to 100
+		var numOfGuesses = 6;
+		var i = 0;
+		for(i; i<numOfGuesses; i++){
+			guessedNumber = parseInt(prompt("Please Enter your guess! You have " + (numOfGuesses-i) + " guesses remaining"));
+			if (guessedNumber === num){
+				alert("Congratulations you guessed correctly: " + guessedNumber);
+				break;
+			}
+			else if (guessedNumber > num){
+				alert("Guess Lower");
+			}
+			else if (guessedNumber < num){
+				alert("Guess Higher");
+			}
+			//should only hit this if statement if we haven't got correct answer
+			if (i === numOfGuesses-1){
+					alert("The correct number was " + num);
+			}
+			
+		}
+
+		
+		
+			
+		
+	}
+</script>
+</html>
